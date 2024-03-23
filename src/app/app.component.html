@@ -1,0 +1,18 @@
+<div *ngIf="!isLogin" >
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+</div>
+
+
+<div style="height:100vh;" *ngIf="isLogin">    
+    <app-header style="height:10vh;"></app-header>    
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <!-- Main Content -->
+    <div style="height:90vh;">
+        <router-outlet ></router-outlet>
+    </div>
+
+</div>
